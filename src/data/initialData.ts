@@ -1,0 +1,1802 @@
+import { Product, CategoryItem, Coupon, HomepageConfig } from '../types';
+
+export const INITIAL_CATEGORIES: CategoryItem[] = [
+  {
+    "id": "hookah",
+    "name": "Hookah / Shisha",
+    "displayName": "HOOKAH / SHISHA",
+    "image": "/uploads/products/mya_suka.svg",
+    "itemCount": 11,
+    "iconName": "Flame",
+    "description": "Genuine Mya, Cocoyaya, and Denver luxury brass and Russian stainless steel hookahs."
+  },
+  {
+    "id": "flavours",
+    "name": "Flavours",
+    "displayName": "FLAVOURS",
+    "image": "/uploads/products/afzal_pan_raas.svg",
+    "itemCount": 10,
+    "iconName": "Sparkles",
+    "description": "Authentic Afzal Pan Raas, Aladin Double Apple, and Al Fakher 100% herbal shisha molasses."
+  },
+  {
+    "id": "bongs_rolls",
+    "name": "Bongs & Rolls",
+    "displayName": "BONGS & ROLLS",
+    "image": "/uploads/products/bongchie_brown_booklet.svg",
+    "itemCount": 10,
+    "iconName": "FileText",
+    "description": "Bongchie, Thrice A Day papers, Perfect Roll cones, shatterproof acrylic bongs & glass percolators."
+  },
+  {
+    "id": "lighters_ashtray",
+    "name": "Lighters & Ashtrays",
+    "displayName": "LIGHTERS & ASHTRAYS",
+    "image": "/uploads/products/zippo_matte_black.svg",
+    "itemCount": 10,
+    "iconName": "Zap",
+    "description": "Original USA Zippo, Flux plasma & jet torches, Stash Pro lighters, crystal glass & spinning metal ashtrays."
+  },
+  {
+    "id": "fragrances",
+    "name": "Fragrances",
+    "displayName": "FRAGRANCES",
+    "image": "/uploads/products/denver_hamilton_edp.svg",
+    "itemCount": 9,
+    "iconName": "Wind",
+    "description": "Denver Hamilton, Bella Vita CEO MAN & White Oud, and Park Avenue long-lasting luxury perfumes."
+  }
+];
+
+export const INITIAL_PRODUCTS: Product[] = [
+  {
+    "id": "prod-mya-suka-01",
+    "name": "Mya Suka Genuine Hookah (Stainless Steel & Crystal Base)",
+    "sku": "QP-MYA-SUKA",
+    "category": "hookah",
+    "subcategory": "Mya Hookahs",
+    "price": 3499,
+    "mrp": 4999,
+    "buyPrice": 1800,
+    "discountPercent": 30,
+    "stock": 35,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 142,
+    "shortDescription": "Original Mya Suka heavy-duty stainless steel shisha with authentic crystal glass base.",
+    "description": "The genuine Mya Suka hookah engineered for heavy, dense smoke clouds. Built with precision German-machined stainless steel stem, threaded airtight crystal glass base, high-grade washable silicone hose, and premium vortex ceramic chillum.",
+    "images": [
+      "/uploads/products/img-1792070684804-cxre4f.jpg"
+    ],
+    "ingredients": [
+      "German Stainless Steel",
+      "Heavy Crystal Glass",
+      "Medical Grade Silicone Hose",
+      "Ceramic Chillum"
+    ],
+    "variants": [
+      {
+        "id": "v-suka-silver",
+        "name": "Stainless Chrome",
+        "price": 3499,
+        "mrp": 4999,
+        "stock": 20
+      },
+      {
+        "id": "v-suka-gold",
+        "name": "Imperial Gold",
+        "price": 3799,
+        "mrp": 5499,
+        "stock": 15
+      }
+    ],
+    "attributes": {
+      "Brand": "Mya Saray",
+      "Model": "Suka Crystal",
+      "Height": "22 Inch",
+      "Vase": "Threaded Crystal"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:24:47.789Z"
+  },
+  {
+    "id": "prod-mya-qt-01",
+    "name": "Mya QT Classic Portable Brass Hookah (With Cage)",
+    "sku": "QP-MYA-QT",
+    "category": "hookah",
+    "subcategory": "Mya Hookahs",
+    "price": 2499,
+    "mrp": 3299,
+    "buyPrice": 1200,
+    "discountPercent": 24,
+    "stock": 40,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.8,
+    "reviewCount": 98,
+    "shortDescription": "Authentic Mya QT compact solid brass hookah with wire travel cage.",
+    "description": "World-renowned Mya QT portable hookah with solid brass core, frosted glass vase, and protective wire carrying cage. Ultimate travel companion for dense smoke sessions.",
+    "images": [
+      "/uploads/products/img-1792070641122-s66qtk.webp"
+    ],
+    "ingredients": [
+      "Solid Cast Brass",
+      "Frosted Glass",
+      "Washable Hose",
+      "Wire Carrier Cage"
+    ],
+    "variants": [
+      {
+        "id": "v-qt-gold",
+        "name": "Royal Gold with Cage",
+        "price": 2499,
+        "mrp": 3299,
+        "stock": 25
+      },
+      {
+        "id": "v-qt-black",
+        "name": "Matte Black with Cage",
+        "price": 2499,
+        "mrp": 3299,
+        "stock": 15
+      }
+    ],
+    "attributes": {
+      "Brand": "Mya Saray",
+      "Model": "QT-02",
+      "Height": "14 Inch",
+      "Includes": "Cage Carrier"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:24:03.147Z"
+  },
+  {
+    "id": "prod-mya-bambino-01",
+    "name": "Mya Bambino Heavy Cut Glass Hookah",
+    "sku": "QP-MYA-BAMBINO",
+    "category": "hookah",
+    "subcategory": "Mya Hookahs",
+    "price": 2999,
+    "mrp": 3999,
+    "buyPrice": 1400,
+    "discountPercent": 25,
+    "stock": 25,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": false,
+    "rating": 4.9,
+    "reviewCount": 64,
+    "shortDescription": "Sculpted cast-brass and heavy cut crystal base shisha pipe.",
+    "description": "Heavyweight cast-brass stem with sculpted geometric cut crystal base. Renowned worldwide for whisper-quiet draw and dense cloud output.",
+    "images": [
+      "/uploads/products/img-1792070791856-cjqll3.webp"
+    ],
+    "ingredients": [
+      "Solid Brass",
+      "Cut Crystal Glass",
+      "Premium Leatherette Case"
+    ],
+    "attributes": {
+      "Brand": "Mya Saray",
+      "Model": "Bambino",
+      "Height": "16 Inch"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:26:34.131Z",
+    "variants": []
+  },
+  {
+    "id": "prod-mya-astra-01",
+    "name": "Mya Astra Russian Style Hookah",
+    "sku": "QP-MYA-ASTRA",
+    "category": "hookah",
+    "subcategory": "Mya Hookahs",
+    "price": 4299,
+    "mrp": 5999,
+    "buyPrice": 2200,
+    "discountPercent": 28,
+    "stock": 20,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": false,
+    "isFeatured": true,
+    "rating": 4.8,
+    "reviewCount": 45,
+    "shortDescription": "Russian vertical purge stainless steel hookah with click-lock.",
+    "description": "Russian minimalist aesthetic with vertical purge valve system, 304 food-grade stainless steel stem, and click-lock crystal base.",
+    "images": [
+      "/uploads/products/img-1792070810078-6b0al3.jpg"
+    ],
+    "ingredients": [
+      "304 Stainless Steel",
+      "Click-Lock Glass Vase",
+      "Soft-Touch Silicone Hose"
+    ],
+    "attributes": {
+      "Brand": "Mya Saray",
+      "Model": "Astra Russian",
+      "Height": "24 Inch"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:26:52.492Z",
+    "variants": []
+  },
+  {
+    "id": "prod-ccy-king-01",
+    "name": "Cocoyaya King Series Brass Hookah (24K Gold Finish)",
+    "sku": "QP-CCY-KING",
+    "category": "hookah",
+    "subcategory": "Cocoyaya Hookahs",
+    "price": 5499,
+    "mrp": 7499,
+    "buyPrice": 2800,
+    "discountPercent": 27,
+    "stock": 18,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 5,
+    "reviewCount": 88,
+    "shortDescription": "Flagship 24K gold-plated solid brass lounge hookah with Bohemian glass.",
+    "description": "The flagship Cocoyaya King Series handcrafted in solid brass with 24K gold plated ornamentation, heavyweight Bohemian glass vase, and silicone hose.",
+    "images": [
+      "/uploads/products/img-1792070707052-ti3trj.jpg"
+    ],
+    "ingredients": [
+      "Heavy Brass",
+      "24K Gold Plating",
+      "Bohemian Crystal Base"
+    ],
+    "attributes": {
+      "Brand": "Cocoyaya",
+      "Series": "King Series",
+      "Height": "28 Inch"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:25:07.755Z",
+    "variants": []
+  },
+  {
+    "id": "prod-ccy-prince-01",
+    "name": "Cocoyaya Prince Edition Compact Shisha",
+    "sku": "QP-CCY-PRINCE",
+    "category": "hookah",
+    "subcategory": "Cocoyaya Hookahs",
+    "price": 3199,
+    "mrp": 4299,
+    "buyPrice": 1500,
+    "discountPercent": 26,
+    "stock": 30,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": false,
+    "rating": 4.7,
+    "reviewCount": 52,
+    "shortDescription": "Cocoyaya Prince edition with magnetic purge valve and wide gauge.",
+    "description": "Cocoyaya Prince edition featuring anti-rust anodized aluminum stem, magnetic purge ball bearing, and wide-gauge downstem for effortless airflow.",
+    "images": [
+      "/uploads/products/img-1792070732142-e9c9qv.jpg"
+    ],
+    "attributes": {
+      "Brand": "Cocoyaya",
+      "Series": "Prince Edition",
+      "Height": "18 Inch"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:25:36.196Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-ccy-niro-01",
+    "name": "Cocoyaya Niro Heavy Stainless Steel Hookah",
+    "sku": "QP-CCY-NIRO",
+    "category": "hookah",
+    "subcategory": "Cocoyaya Hookahs",
+    "price": 4799,
+    "mrp": 6499,
+    "buyPrice": 2400,
+    "discountPercent": 26,
+    "stock": 22,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": false,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 39,
+    "shortDescription": "V2A heavy stainless steel lounge hookah with built-in diffuser.",
+    "description": "Cocoyaya Niro series built with V2A heavy stainless steel stem, built-in diffuser for silent bubbling, and airtight click-lock connector.",
+    "images": [
+      "/uploads/products/img-1792070751719-prgpwj.jpg"
+    ],
+    "attributes": {
+      "Brand": "Cocoyaya",
+      "Model": "Niro V2A",
+      "Height": "24 Inch"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:25:52.731Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-ccy-simba-01",
+    "name": "Cocoyaya Simba Russian Edition Hookah",
+    "sku": "QP-CCY-SIMBA",
+    "category": "hookah",
+    "subcategory": "Cocoyaya Hookahs",
+    "price": 4999,
+    "mrp": 6899,
+    "buyPrice": 2600,
+    "discountPercent": 28,
+    "stock": 15,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 47,
+    "shortDescription": "Inverted purge Russian shisha with textured sleeve.",
+    "description": "Cocoyaya Simba 2.0 with inverted blow-off purge mechanism, textured silicone sleeve, and heavy crystal teardrop vase.",
+    "images": [
+      "/uploads/products/img-1792070767649-qd7fkb.jpg"
+    ],
+    "attributes": {
+      "Brand": "Cocoyaya",
+      "Model": "Simba 2.0",
+      "Height": "25 Inch"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:26:10.762Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-dnv-russian-hookah",
+    "name": "Denver Russian Hybrid Pro Hookah",
+    "sku": "QP-DNV-RUSSIAN",
+    "category": "hookah",
+    "subcategory": "Denver Hookahs",
+    "price": 5999,
+    "mrp": 8499,
+    "buyPrice": 3100,
+    "discountPercent": 29,
+    "stock": 16,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 5,
+    "reviewCount": 55,
+    "shortDescription": "Aircraft aluminum & stainless steel Russian hybrid with radial purge.",
+    "description": "Denver luxury Russian hybrid hookah engineered with aircraft-grade aluminum, surgical stainless downstem, and 360-degree radial purge ring.",
+    "images": [
+      "/uploads/products/img-1792070907483-q4h7d1.webp"
+    ],
+    "attributes": {
+      "Brand": "Denver",
+      "Style": "Russian Hybrid",
+      "Height": "26 Inch"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:28:30.043Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-dnv-steel-hookah",
+    "name": "Denver Heavy Stainless Steel Shisha",
+    "sku": "QP-DNV-STEEL",
+    "category": "hookah",
+    "subcategory": "Denver Hookahs",
+    "price": 5299,
+    "mrp": 7199,
+    "buyPrice": 2700,
+    "discountPercent": 26,
+    "stock": 20,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": false,
+    "isFeatured": true,
+    "rating": 4.8,
+    "reviewCount": 32,
+    "shortDescription": "Heavyweight solid stainless steel pipe with threaded vase.",
+    "description": "Heavyweight solid stainless steel hookah from Denver with precision threaded base, washable braided hose, and phunnel bowl.",
+    "images": [
+      "/uploads/products/img-1792070833984-n6vlxe.webp"
+    ],
+    "attributes": {
+      "Brand": "Denver",
+      "Material": "304 Stainless",
+      "Height": "24 Inch"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:27:16.580Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-dnv-carbon-hookah",
+    "name": "Denver Carbon Fiber Stealth Hookah",
+    "sku": "QP-DNV-CARBON",
+    "category": "hookah",
+    "subcategory": "Denver Hookahs",
+    "price": 6499,
+    "mrp": 8999,
+    "buyPrice": 3400,
+    "discountPercent": 28,
+    "stock": 12,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 5,
+    "reviewCount": 41,
+    "shortDescription": "Real woven carbon fiber shisha with matte black hardware.",
+    "description": "Denver Stealth edition wrapped in real woven carbon fiber, matte black anodized hardware, and magnetic hose docking port.",
+    "images": [
+      "/uploads/products/denver_carbon.svg"
+    ],
+    "attributes": {
+      "Brand": "Denver",
+      "Sleeve": "Real Carbon Fiber",
+      "Height": "26 Inch"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:28:53.548Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-afz-panraas-01",
+    "name": "Afzal (Absol) Pan Raas 50g Herbal Shisha Molasses",
+    "sku": "QP-AFZ-PANRAAS",
+    "category": "flavours",
+    "subcategory": "Afzal Flavours",
+    "price": 199,
+    "mrp": 250,
+    "buyPrice": 90,
+    "discountPercent": 20,
+    "stock": 150,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 5,
+    "reviewCount": 310,
+    "shortDescription": "Original Indian spicy betel leaf, rose and icy cool mint herbal molasses.",
+    "description": "The undisputed king of herbal hookah molasses. Afzal Pan Raas blends authentic Indian spicy betel leaf, sweet supari, rose oil, and cooling mint crystals. 100% tobacco and nicotine free.",
+    "images": [
+      "/uploads/products/img-1792071065515-qoyue3.webp"
+    ],
+    "ingredients": [
+      "Sugarcane Molasses",
+      "Natural Betel Leaf Extract",
+      "Spearmint Oil",
+      "Menthol Crystals"
+    ],
+    "variants": [
+      {
+        "id": "v-afz-50g",
+        "name": "50g Pack",
+        "price": 199,
+        "mrp": 250,
+        "stock": 100
+      },
+      {
+        "id": "v-afz-250g",
+        "name": "250g Tub",
+        "price": 899,
+        "mrp": 1100,
+        "stock": 50
+      }
+    ],
+    "attributes": {
+      "Brand": "Afzal (Absol)",
+      "Type": "100% Herbal Molasses",
+      "Weight": "50g",
+      "Tobacco": "0%"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:31:07.099Z"
+  },
+  {
+    "id": "prod-afz-bombay-01",
+    "name": "Afzal (Absol) Bombay Pan Masala Herbal Flavour (50g)",
+    "sku": "QP-AFZ-BOMBAY",
+    "category": "flavours",
+    "subcategory": "Afzal Flavours",
+    "price": 199,
+    "mrp": 250,
+    "buyPrice": 90,
+    "discountPercent": 20,
+    "stock": 120,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": false,
+    "rating": 4.8,
+    "reviewCount": 145,
+    "shortDescription": "Royal Mumbai sweet gulkand, cardamom, and supari shisha flavour.",
+    "description": "Traditional Mumbai pan masala essence with rich gulkand, silver foil fragrance, and cardamom notes for sweet royal clouds.",
+    "images": [
+      "/uploads/products/img-1792071075276-vfmnf6.webp"
+    ],
+    "attributes": {
+      "Brand": "Afzal (Absol)",
+      "Taste": "Sweet Gulkand & Spice",
+      "Weight": "50g"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:31:20.299Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-afz-brainfreeze-01",
+    "name": "Afzal (Absol) Brain Freeze Arctic Mint (50g)",
+    "sku": "QP-AFZ-BRAINFREEZE",
+    "category": "flavours",
+    "subcategory": "Afzal Flavours",
+    "price": 199,
+    "mrp": 250,
+    "buyPrice": 90,
+    "discountPercent": 20,
+    "stock": 140,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 190,
+    "shortDescription": "Sub-zero arctic cooling menthol crystals for freezing dense clouds.",
+    "description": "Sub-zero ice mint burst that shocks the throat with dense, cooling clouds. Perfect as a standalone smoke or cooling mixer.",
+    "images": [
+      "/uploads/products/img-1792071095865-lgo6mr.webp"
+    ],
+    "attributes": {
+      "Brand": "Afzal (Absol)",
+      "Profile": "Extreme Menthol Ice",
+      "Weight": "50g"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:31:38.491Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-afz-choco-01",
+    "name": "Afzal (Absol) Chocofusion Premium Molasses (50g)",
+    "sku": "QP-AFZ-CHOCO",
+    "category": "flavours",
+    "subcategory": "Afzal Flavours",
+    "price": 199,
+    "mrp": 250,
+    "buyPrice": 90,
+    "discountPercent": 20,
+    "stock": 90,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": false,
+    "isFeatured": false,
+    "rating": 4.7,
+    "reviewCount": 75,
+    "shortDescription": "Velvety Swiss dark chocolate and creamy hazelnut molasses.",
+    "description": "Velvety blend of Swiss dark chocolate, roasted hazelnut, and creamy vanilla molasses for dessert shisha lovers.",
+    "images": [
+      "/uploads/products/img-1792071198775-7o590d.webp"
+    ],
+    "attributes": {
+      "Brand": "Afzal (Absol)",
+      "Dessert": "Dark Chocolate Fusion",
+      "Weight": "50g"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:33:21.292Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-ald-apple-01",
+    "name": "Aladin Double Apple Connoisseur Flavour (50g)",
+    "sku": "QP-ALD-APPLE",
+    "category": "flavours",
+    "subcategory": "Aladin Flavours",
+    "price": 220,
+    "mrp": 280,
+    "buyPrice": 100,
+    "discountPercent": 21,
+    "stock": 110,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.8,
+    "reviewCount": 82,
+    "shortDescription": "Traditional Middle Eastern Two Apples recipe with sweet aniseed.",
+    "description": "Classic Middle Eastern Two Apples recipe by Aladin. Crisp red and green apples balanced with aniseed for licorice clouds.",
+    "images": [
+      "/uploads/products/img-1792071137751-jc6iky.jpg"
+    ],
+    "attributes": {
+      "Brand": "Aladin",
+      "Flavor": "Double Apple & Anise",
+      "Weight": "50g"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:32:19.875Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-ald-blueberry-01",
+    "name": "Aladin Blueberry Mint Blast Flavour (50g)",
+    "sku": "QP-ALD-BLUEBERRY",
+    "category": "flavours",
+    "subcategory": "Aladin Flavours",
+    "price": 220,
+    "mrp": 280,
+    "buyPrice": 100,
+    "discountPercent": 21,
+    "stock": 130,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": false,
+    "rating": 4.9,
+    "reviewCount": 94,
+    "shortDescription": "Ripe forest blueberries and refreshing mountain spearmint.",
+    "description": "Sweet forest blueberries blended with fresh spearmint leaves for a refreshing, fruity shisha session.",
+    "images": [
+      "/uploads/products/img-1792071125885-nsw7po.jpg"
+    ],
+    "attributes": {
+      "Brand": "Aladin",
+      "Flavor": "Blueberry Ice Mint",
+      "Weight": "50g"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:32:08.187Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-ald-paantwist-01",
+    "name": "Aladin Paan Twist Supreme Flavour (50g)",
+    "sku": "QP-ALD-PAANTWIST",
+    "category": "flavours",
+    "subcategory": "Aladin Flavours",
+    "price": 220,
+    "mrp": 280,
+    "buyPrice": 100,
+    "discountPercent": 21,
+    "stock": 100,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": false,
+    "isFeatured": true,
+    "rating": 4.8,
+    "reviewCount": 67,
+    "shortDescription": "Calcutta betel leaf with citrus zest and ice crystals.",
+    "description": "Exquisite Calcutta betel leaf blended with citrus and mint for an elevated modern pan flavour profile.",
+    "images": [
+      "/uploads/products/img-1792071115332-w9e865.jpg"
+    ],
+    "attributes": {
+      "Brand": "Aladin",
+      "Flavor": "Calcutta Paan Twist",
+      "Weight": "50g"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:31:57.980Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-alf-twoapples-01",
+    "name": "Al Fakher Two Apples Authentic Shisha Flavour (50g)",
+    "sku": "QP-ALF-TWOAPPLES",
+    "category": "flavours",
+    "subcategory": "Al Fakher Flavours",
+    "price": 250,
+    "mrp": 320,
+    "buyPrice": 110,
+    "discountPercent": 22,
+    "stock": 160,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 5,
+    "reviewCount": 380,
+    "shortDescription": "World standard Bahraini Two Apples with iconic aniseed aroma.",
+    "description": "The world standard of hookah flavours. Al Fakher Two Apples delivers rich Bahraini aniseed and sweet apple aromas.",
+    "images": [
+      "/uploads/products/img-1792071152975-ovvefn.webp"
+    ],
+    "attributes": {
+      "Brand": "Al Fakher",
+      "Heritage": "Dubai UAE Original",
+      "Weight": "50g"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:32:35.140Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-alf-mint-01",
+    "name": "Al Fakher Mint Magic Herbal Flavour (50g)",
+    "sku": "QP-ALF-MINT",
+    "category": "flavours",
+    "subcategory": "Al Fakher Flavours",
+    "price": 250,
+    "mrp": 320,
+    "buyPrice": 110,
+    "discountPercent": 22,
+    "stock": 150,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": false,
+    "rating": 4.9,
+    "reviewCount": 210,
+    "shortDescription": "Crisp natural peppermint and spearmint herbal molasses.",
+    "description": "Crisp natural peppermint and spearmint blend providing smooth, lingering herbal coolness on every pull.",
+    "images": [
+      "/uploads/products/img-1792071162312-yxlv8b.webp"
+    ],
+    "attributes": {
+      "Brand": "Al Fakher",
+      "Profile": "Pure Herbal Mint",
+      "Weight": "50g"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:32:44.523Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-alf-grapemint-01",
+    "name": "Al Fakher Grape with Mint Premium Flavour (50g)",
+    "sku": "QP-ALF-GRAPEMINT",
+    "category": "flavours",
+    "subcategory": "Al Fakher Flavours",
+    "price": 250,
+    "mrp": 320,
+    "buyPrice": 110,
+    "discountPercent": 22,
+    "stock": 125,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 180,
+    "shortDescription": "Juicy black grapes and cooling mint leaves herbal mix.",
+    "description": "Juicy black grapes complemented by cooling mint leaves for a deeply satisfying, sweet smoke.",
+    "images": [
+      "/uploads/products/img-1792071183037-0b7yuz.webp"
+    ],
+    "attributes": {
+      "Brand": "Al Fakher",
+      "Taste": "Black Grape & Mint",
+      "Weight": "50g"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:33:05.179Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-bch-brown-01",
+    "name": "Bongchie Brown King Size Slim Paper Booklet (With Tips)",
+    "sku": "QP-BCH-BROWN",
+    "category": "bongs_rolls",
+    "subcategory": "Rolling Papers",
+    "price": 120,
+    "mrp": 150,
+    "buyPrice": 45,
+    "discountPercent": 20,
+    "stock": 200,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 220,
+    "shortDescription": "Unbleached natural brown king size slim paper with roach tips.",
+    "description": "Bongchie authentic unbleached brown king size slim rolling paper booklet. Includes 32 ultra-thin leaves and 32 roach tips.",
+    "images": [
+      "/uploads/products/img-1792070514999-f3j0rt.jpg"
+    ],
+    "attributes": {
+      "Brand": "Bongchie",
+      "Paper": "Unbleached Brown Hemp",
+      "Size": "King Size Slim (32 Leaves + 32 Tips)"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:21:58.395Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-bch-white-01",
+    "name": "Bongchie White Ultra Thin Paper Booklet (With Tips)",
+    "sku": "QP-BCH-WHITE",
+    "category": "bongs_rolls",
+    "subcategory": "Rolling Papers",
+    "price": 120,
+    "mrp": 150,
+    "buyPrice": 45,
+    "discountPercent": 20,
+    "stock": 180,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": false,
+    "rating": 4.8,
+    "reviewCount": 175,
+    "shortDescription": "Ultra-thin white rice rolling papers with natural gum line.",
+    "description": "Bongchie ultra-thin white rice rolling paper booklet with natural Arabic gum line for zero-ash, even burn.",
+    "images": [
+      "/uploads/products/img-1792070478753-pnfd8u.jpg"
+    ],
+    "attributes": {
+      "Brand": "Bongchie",
+      "Paper": "Ultra Thin White Rice",
+      "Count": "32 Leaves + 32 Tips"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:21:21.779Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-tad-brown-01",
+    "name": "Thrice A Day (TAD) Brown Natural Rolling Paper Booklet",
+    "sku": "QP-TAD-BROWN",
+    "category": "bongs_rolls",
+    "subcategory": "Rolling Papers",
+    "price": 140,
+    "mrp": 180,
+    "buyPrice": 50,
+    "discountPercent": 22,
+    "stock": 160,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 150,
+    "shortDescription": "Thrice A Day brown unbleached rolling paper with perforated roaches.",
+    "description": "Authentic Thrice A Day brown rolling paper booklet with perforated roaches. Engineered for slow, consistent burn.",
+    "images": [
+      "/uploads/products/img-1792070461767-nyp3gt.jpg"
+    ],
+    "attributes": {
+      "Brand": "Thrice A Day (TAD)",
+      "Material": "Natural Unrefined Brown",
+      "Roaches": "Perforated Tips"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:21:08.732Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-tad-white-01",
+    "name": "Thrice A Day (TAD) White Ultra-Thin Rolling Paper Booklet",
+    "sku": "QP-TAD-WHITE",
+    "category": "bongs_rolls",
+    "subcategory": "Rolling Papers",
+    "price": 140,
+    "mrp": 180,
+    "buyPrice": 50,
+    "discountPercent": 22,
+    "stock": 150,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": false,
+    "isFeatured": false,
+    "rating": 4.8,
+    "reviewCount": 95,
+    "shortDescription": "Thrice A Day white ultra-thin translucent rolling paper with filters.",
+    "description": "Thrice A Day white ultra-thin translucent paper booklet with natural tree gum line and roach filters.",
+    "images": [
+      "/uploads/products/img-1792070558280-x0gvpy.jpg"
+    ],
+    "attributes": {
+      "Brand": "Thrice A Day (TAD)",
+      "Type": "White Translucent",
+      "Count": "32 Sheets"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:22:43.763Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-pr-brown-01",
+    "name": "Perfect Roll Brown Pre-Rolled Cones (Pack of 3)",
+    "sku": "QP-PR-BROWNCONES",
+    "category": "bongs_rolls",
+    "subcategory": "Pre-Rolled Cones",
+    "price": 150,
+    "mrp": 200,
+    "buyPrice": 60,
+    "discountPercent": 25,
+    "stock": 220,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 190,
+    "shortDescription": "Pack of 3 unbleached brown pre-rolled cones with built-in filters.",
+    "description": "Perfect Roll brown pre-rolled unbleached cones with built-in W-tip filters. Just pack and light.",
+    "images": [
+      "/uploads/products/img-1792070532913-0he7sr.jpg"
+    ],
+    "attributes": {
+      "Brand": "Perfect Roll",
+      "Format": "Pre-Rolled Cones (Pack of 3)",
+      "Paper": "Organic Brown Hemp"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:22:22.875Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-pr-white-01",
+    "name": "Perfect Roll White Ultra-Thin Pre-Rolled Cones (Pack of 3)",
+    "sku": "QP-PR-WHITECONES",
+    "category": "bongs_rolls",
+    "subcategory": "Pre-Rolled Cones",
+    "price": 150,
+    "mrp": 200,
+    "buyPrice": 60,
+    "discountPercent": 25,
+    "stock": 200,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": false,
+    "rating": 4.8,
+    "reviewCount": 160,
+    "shortDescription": "Pack of 3 ultra-thin white rice pre-rolled cones.",
+    "description": "Perfect Roll white pre-rolled cones made with slow-burning rice paper and integrated crutch tip.",
+    "images": [
+      "/uploads/products/img-1792070494089-pbgjmy.jpg"
+    ],
+    "attributes": {
+      "Brand": "Perfect Roll",
+      "Format": "Pre-Rolled Cones (Pack of 3)",
+      "Paper": "Ultra-Thin White"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:21:35.747Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-bng-neon-01",
+    "name": "Multi-Ring Neon Acrylic Water Pipe Bong (10 Inch)",
+    "sku": "QP-BNG-ACRYLICNEON",
+    "category": "bongs_rolls",
+    "subcategory": "Acrylic Bongs",
+    "price": 699,
+    "mrp": 999,
+    "buyPrice": 280,
+    "discountPercent": 30,
+    "stock": 45,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.7,
+    "reviewCount": 78,
+    "shortDescription": "10-inch unbreakable neon acrylic water pipe with removable downstem.",
+    "description": "Heavy-duty shatterproof acrylic bong with rubberized airtight base, removable metal downstem, and carb hole.",
+    "images": [
+      "/uploads/products/img-1792070587829-2pd2ii.jpg"
+    ],
+    "attributes": {
+      "Material": "Heavy Shatterproof Acrylic",
+      "Height": "10 Inch",
+      "Base": "Rubberized Anti-Slip"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:23:10.459Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-bng-bubble-01",
+    "name": "Compact Pistol Grip Bubble Acrylic Bong (8 Inch)",
+    "sku": "QP-BNG-ACRYLICBUBBLE",
+    "category": "bongs_rolls",
+    "subcategory": "Acrylic Bongs",
+    "price": 499,
+    "mrp": 799,
+    "buyPrice": 200,
+    "discountPercent": 37,
+    "stock": 60,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": false,
+    "isFeatured": false,
+    "rating": 4.6,
+    "reviewCount": 52,
+    "shortDescription": "Ergonomic pistol grip bubble acrylic bong with metal slide.",
+    "description": "Ergonomic pistol grip bubble acrylic bong engineered for durability, portability, and easy cleaning.",
+    "images": [
+      "/uploads/products/acrylic_bong_bubble.svg"
+    ],
+    "attributes": {
+      "Material": "Durable Molded Plastic / Acrylic",
+      "Height": "8 Inch"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T03:21:31.900Z"
+  },
+  {
+    "id": "prod-bng-doubleperc-01",
+    "name": "Double Honeycomb Matrix Glass Percolator Bong (12 Inch)",
+    "sku": "QP-BNG-GLASSDOUBLE",
+    "category": "bongs_rolls",
+    "subcategory": "Glass Percolators",
+    "price": 2199,
+    "mrp": 3299,
+    "buyPrice": 950,
+    "discountPercent": 33,
+    "stock": 25,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 5,
+    "reviewCount": 84,
+    "shortDescription": "12-inch 7mm thick borosilicate glass bong with double honeycomb perc.",
+    "description": "High-grade 7mm thick borosilicate glass bong with twin honeycomb percolator discs and ice-pinches for ice-cold filtered hits.",
+    "images": [
+      "/uploads/products/img-1792070604880-441bkg.jpg"
+    ],
+    "attributes": {
+      "Glass": "7mm Heavy Borosilicate",
+      "Height": "12 Inch",
+      "Perc": "Twin Honeycomb Discs"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:23:27.147Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-bng-treeperc-01",
+    "name": "Matrix Showerhead Tree Perc Ice Glass Bong (14 Inch)",
+    "sku": "QP-BNG-GLASSTREE",
+    "category": "bongs_rolls",
+    "subcategory": "Glass Percolators",
+    "price": 2799,
+    "mrp": 3999,
+    "buyPrice": 1200,
+    "discountPercent": 30,
+    "stock": 20,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 65,
+    "shortDescription": "14-inch borosilicate glass pipe with showerhead tree percolator.",
+    "description": "14-inch heavy borosilicate water pipe featuring a multi-arm showerhead tree percolator, splash guard, and 14mm quartz bowl.",
+    "images": [
+      "/uploads/products/glass_percolator_tree.svg"
+    ],
+    "attributes": {
+      "Glass": "Borosilicate 9mm Joint",
+      "Height": "14 Inch",
+      "Perc": "Showerhead Tree"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T03:21:31.900Z"
+  },
+  {
+    "id": "prod-flx-quad-01",
+    "name": "Flux Turbo Quad-Jet Torch Lighter",
+    "sku": "QP-FLX-QUADTORCH",
+    "category": "lighters_ashtray",
+    "subcategory": "Flux Lighters",
+    "price": 599,
+    "mrp": 899,
+    "buyPrice": 220,
+    "discountPercent": 33,
+    "stock": 70,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 110,
+    "shortDescription": "Windproof quad-jet butane torch lighter with coal ignition power.",
+    "description": "Flux windproof quad-flame butane torch lighter reaching 2300°F. Ignites coconut coals in 20 seconds. Built-in fuel window.",
+    "images": [
+      "/uploads/products/img-1792071019245-57iqw7.jpg"
+    ],
+    "attributes": {
+      "Brand": "Flux",
+      "Flame": "4x High-Velocity Blue Jets",
+      "Refillable": "Standard Butane"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:30:22.500Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-flx-plasma-01",
+    "name": "Flux Dual Electric Arc Plasma USB Lighter",
+    "sku": "QP-FLX-PLASMA",
+    "category": "lighters_ashtray",
+    "subcategory": "Flux Lighters",
+    "price": 699,
+    "mrp": 999,
+    "buyPrice": 280,
+    "discountPercent": 30,
+    "stock": 55,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": false,
+    "rating": 4.8,
+    "reviewCount": 88,
+    "shortDescription": "Rechargeable dual electric arc plasma lighter with USB-C.",
+    "description": "Rechargeable flameless electric plasma lighter with dual crossed arcs. 100% windproof and waterproof with USB-C charging.",
+    "images": [
+      "/uploads/products/img-1792071040633-1uo5zo.jpg"
+    ],
+    "attributes": {
+      "Brand": "Flux",
+      "Type": "Dual Arc Plasma",
+      "Battery": "Rechargeable USB-C"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:30:42.250Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-stp-metal-01",
+    "name": "Stash Pro Refillable Metal Jet Lighter",
+    "sku": "QP-STP-METALJET",
+    "category": "lighters_ashtray",
+    "subcategory": "Stash Pro Lighters",
+    "price": 449,
+    "mrp": 650,
+    "buyPrice": 180,
+    "discountPercent": 31,
+    "stock": 80,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.8,
+    "reviewCount": 125,
+    "shortDescription": "Refillable heavy metal jet lighter with flame regulator.",
+    "description": "Heavy metal zinc alloy jet torch by Stash Pro. Ergonomic thumb trigger, flame regulator, and refillable brass valve.",
+    "images": [
+      "/uploads/products/img-1792070964774-f5mm4a.jpg"
+    ],
+    "attributes": {
+      "Brand": "Stash Pro",
+      "Body": "Zinc Alloy Metal",
+      "Flame": "Windproof Jet"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:29:27.259Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-stp-clipper-01",
+    "name": "Stash Pro Flame Clipper Edition Lighter",
+    "sku": "QP-STP-CLIPPER",
+    "category": "lighters_ashtray",
+    "subcategory": "Stash Pro Lighters",
+    "price": 299,
+    "mrp": 450,
+    "buyPrice": 120,
+    "discountPercent": 34,
+    "stock": 95,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": false,
+    "isFeatured": false,
+    "rating": 4.7,
+    "reviewCount": 92,
+    "shortDescription": "Refillable metal clipper lighter with integrated poker tool.",
+    "description": "Stash Pro clipper-style metal lighter with removable flint poker tool, adjustable flame, and metal gift case.",
+    "images": [
+      "/uploads/products/img-1792070950707-wo9nsz.jpg"
+    ],
+    "attributes": {
+      "Brand": "Stash Pro",
+      "Style": "Metal Clipper",
+      "Tool": "Integrated Poker"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:29:13.339Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-zip-matte-01",
+    "name": "Zippo Classic Matte Black Windproof Lighter (Original USA)",
+    "sku": "QP-ZIP-MATTEBLACK",
+    "category": "lighters_ashtray",
+    "subcategory": "Zippo Lighters",
+    "price": 2499,
+    "mrp": 3299,
+    "buyPrice": 1300,
+    "discountPercent": 24,
+    "stock": 35,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 5,
+    "reviewCount": 260,
+    "shortDescription": "Original USA Zippo windproof lighter in classic matte black finish.",
+    "description": "The iconic genuine Zippo windproof lighter with distinctive \"click\", durable matte black powder-coat finish, and lifetime guarantee.",
+    "images": [
+      "/uploads/products/img-1792071001255-iti39t.webp",
+      "/uploads/products/zippo_detail.jpg"
+    ],
+    "attributes": {
+      "Brand": "Zippo",
+      "Origin": "Made in USA (Bradford, PA)",
+      "Warranty": "Lifetime Guarantee"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:30:03.395Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-zip-chrome-01",
+    "name": "Zippo Vintage Brushed Chrome Brass Lighter",
+    "sku": "QP-ZIP-BRUSHEDCHROME",
+    "category": "lighters_ashtray",
+    "subcategory": "Zippo Lighters",
+    "price": 2699,
+    "mrp": 3499,
+    "buyPrice": 1400,
+    "discountPercent": 23,
+    "stock": 30,
+    "isTobaccoFree": true,
+    "isAgeRestricted": true,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 5,
+    "reviewCount": 180,
+    "shortDescription": "Authentic Bradford PA vintage brushed chrome Zippo lighter.",
+    "description": "Authentic Zippo vintage brushed chrome windproof lighter crafted in Bradford, PA. All metal construction with refillable flint system.",
+    "images": [
+      "/uploads/products/img-1792070985801-bptpcu.webp"
+    ],
+    "attributes": {
+      "Brand": "Zippo",
+      "Finish": "Vintage Brushed Chrome",
+      "Origin": "Made in USA"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:29:48.156Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-ash-octaglass-01",
+    "name": "Faceted Octagonal Heavy Crystal Glass Ashtray",
+    "sku": "QP-ASH-OCTAGLASS",
+    "category": "lighters_ashtray",
+    "subcategory": "Glass Ashtrays",
+    "price": 599,
+    "mrp": 899,
+    "buyPrice": 220,
+    "discountPercent": 33,
+    "stock": 40,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": false,
+    "rating": 4.8,
+    "reviewCount": 65,
+    "shortDescription": "Heavy octagonal crystal glass ashtray with 4 cigarette rests.",
+    "description": "Ultra-heavy faceted crystal glass ashtray with 4 deep cigarette rests and diamond-cut light refractions.",
+    "images": [
+      "/uploads/products/glass_ashtray_crystal.svg"
+    ],
+    "attributes": {
+      "Material": "Heavy Lead-Free Crystal Glass",
+      "Shape": "Faceted Octagon"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T03:21:31.900Z"
+  },
+  {
+    "id": "prod-ash-roundglass-01",
+    "name": "Heavy Cut Crystal Round Lounge Glass Ashtray",
+    "sku": "QP-ASH-ROUNDGLASS",
+    "category": "lighters_ashtray",
+    "subcategory": "Glass Ashtrays",
+    "price": 499,
+    "mrp": 799,
+    "buyPrice": 190,
+    "discountPercent": 37,
+    "stock": 50,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": false,
+    "isFeatured": false,
+    "rating": 4.7,
+    "reviewCount": 48,
+    "shortDescription": "Solid round crystal glass lounge ashtray.",
+    "description": "Solid lead-free crystal glass round ashtray designed for luxury lounge tables. Dishwasher safe and chip-resistant.",
+    "images": [
+      "/uploads/products/glass_ashtray_round.svg"
+    ],
+    "attributes": {
+      "Material": "Solid Thick Crystal Glass",
+      "Diameter": "6 Inch"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T03:21:31.900Z"
+  },
+  {
+    "id": "prod-ash-spinmetal-01",
+    "name": "Spinning Push-Down Smoke Eliminator Metal Ashtray",
+    "sku": "QP-ASH-SPINMETAL",
+    "category": "lighters_ashtray",
+    "subcategory": "Metal Ashtrays",
+    "price": 649,
+    "mrp": 950,
+    "buyPrice": 250,
+    "discountPercent": 31,
+    "stock": 60,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 115,
+    "shortDescription": "Spinning push-down metal ashtray with odor-sealing trap chamber.",
+    "description": "Push-down spinning lid instantly drops ash and butts into the odor-sealed inner chamber, trapping smoke and odors.",
+    "images": [
+      "/uploads/products/metal_ashtray_spinning.svg"
+    ],
+    "attributes": {
+      "Material": "Brushed Stainless Metal",
+      "Mechanism": "Spinning Push-Down Trap"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T03:21:31.900Z"
+  },
+  {
+    "id": "prod-ash-vintagebrass-01",
+    "name": "Cast Antique Brass Heavy Metal Ashtray",
+    "sku": "QP-ASH-VINTAGEBRASS",
+    "category": "lighters_ashtray",
+    "subcategory": "Metal Ashtrays",
+    "price": 899,
+    "mrp": 1299,
+    "buyPrice": 380,
+    "discountPercent": 30,
+    "stock": 30,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 5,
+    "reviewCount": 52,
+    "shortDescription": "Handcrafted solid cast brass vintage ashtray with royal engravings.",
+    "description": "Handcrafted solid cast brass vintage ashtray with intricate royal filigree engravings and non-slip felt base.",
+    "images": [
+      "/uploads/products/metal_ashtray_vintage.svg"
+    ],
+    "attributes": {
+      "Material": "Solid Cast Brass",
+      "Finish": "Antique Gold Filigree"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T03:21:31.900Z"
+  },
+  {
+    "id": "prod-dnv-hamilton-01",
+    "name": "Denver Hamilton Imperial Luxury Eau De Parfum (100ml)",
+    "sku": "QP-DNV-HAMILTON",
+    "category": "fragrances",
+    "subcategory": "Denver Perfumes",
+    "price": 599,
+    "mrp": 899,
+    "buyPrice": 240,
+    "discountPercent": 33,
+    "stock": 80,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 185,
+    "shortDescription": "Masculine Italian bergamot, warm amber wood, and spice EDP.",
+    "description": "Denver Hamilton Imperial Eau De Parfum. A powerful masculine fragrance opening with Italian bergamot, spice, and warm amber wood.",
+    "images": [
+      "/uploads/products/img-1792071224962-6csv2d.jpg"
+    ],
+    "attributes": {
+      "Brand": "Denver",
+      "Concentration": "Eau De Parfum (EDP)",
+      "Volume": "100ml",
+      "Longevity": "All-Day 12h+"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:33:47.732Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-dnv-victor-01",
+    "name": "Denver Sporting Club Victor Long-Lasting Perfume (100ml)",
+    "sku": "QP-DNV-VICTOR",
+    "category": "fragrances",
+    "subcategory": "Denver Perfumes",
+    "price": 549,
+    "mrp": 799,
+    "buyPrice": 220,
+    "discountPercent": 31,
+    "stock": 90,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": false,
+    "rating": 4.8,
+    "reviewCount": 140,
+    "shortDescription": "Green mandarin and aquatic sandalwood sports perfume.",
+    "description": "Energetic sporty fragrance combining green mandarin, aquatic breeze, and sandalwood for all-day active freshness.",
+    "images": [
+      "/uploads/products/img-1792071247184-zsh9zi.jpg"
+    ],
+    "attributes": {
+      "Brand": "Denver",
+      "Edition": "Sporting Club Victor",
+      "Volume": "100ml"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:34:09.492Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-dnv-caliber-01",
+    "name": "Denver Caliber Signature Luxury EDP (100ml)",
+    "sku": "QP-DNV-CALIBER",
+    "category": "fragrances",
+    "subcategory": "Denver Perfumes",
+    "price": 649,
+    "mrp": 999,
+    "buyPrice": 260,
+    "discountPercent": 35,
+    "stock": 70,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": false,
+    "isFeatured": false,
+    "rating": 4.7,
+    "reviewCount": 95,
+    "shortDescription": "Smoked cedar, leather, and vanilla bean evening EDP.",
+    "description": "Intense evening parfum with notes of leather, smoked cedar, and rich vanilla bean.",
+    "images": [
+      "/uploads/products/img-1792071272733-wwf052.jpg"
+    ],
+    "attributes": {
+      "Brand": "Denver",
+      "Profile": "Warm Cedar & Amber Spice",
+      "Volume": "100ml"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:34:34.796Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-bv-ceoman-01",
+    "name": "Bella Vita Luxury CEO MAN Intense EDP (100ml)",
+    "sku": "QP-BV-CEOMAN",
+    "category": "fragrances",
+    "subcategory": "Bella Vita Perfumes",
+    "price": 799,
+    "mrp": 1199,
+    "buyPrice": 320,
+    "discountPercent": 33,
+    "stock": 85,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 5,
+    "reviewCount": 290,
+    "shortDescription": "Commanding boardroom luxury perfume with lavender and vetiver.",
+    "description": "Command attention with Bella Vita CEO MAN. A sophisticated blend of lemon, lavender, vetiver, and tonka bean.",
+    "images": [
+      "/uploads/products/img-1792071293213-m5nvvj.jpg"
+    ],
+    "attributes": {
+      "Brand": "Bella Vita Luxury",
+      "Signature": "CEO MAN Intense",
+      "Volume": "100ml Heavy Glass"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:34:55.404Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-bv-whiteoud-01",
+    "name": "Bella Vita White Oud Unisex Luxury Perfume (100ml)",
+    "sku": "QP-BV-WHITEOUD",
+    "category": "fragrances",
+    "subcategory": "Bella Vita Perfumes",
+    "price": 849,
+    "mrp": 1299,
+    "buyPrice": 350,
+    "discountPercent": 35,
+    "stock": 75,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 230,
+    "shortDescription": "Opulent damask rose, amber, and smokey white oud unisex perfume.",
+    "description": "Opulent Arabic fragrance opening with sweet artemisia, damask rose, and smokey white oud.",
+    "images": [
+      "/uploads/products/img-1792071312404-axapxt.jpg"
+    ],
+    "attributes": {
+      "Brand": "Bella Vita Luxury",
+      "Note": "White Oud & Amber Rose",
+      "Gender": "Unisex"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:35:14.939Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-bv-skai-01",
+    "name": "Bella Vita Skai Aquatic Eau De Cologne (100ml)",
+    "sku": "QP-BV-SKAI",
+    "category": "fragrances",
+    "subcategory": "Bella Vita Perfumes",
+    "price": 699,
+    "mrp": 999,
+    "buyPrice": 280,
+    "discountPercent": 30,
+    "stock": 90,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": false,
+    "isFeatured": false,
+    "rating": 4.8,
+    "reviewCount": 110,
+    "shortDescription": "Ocean air, bergamot zest, and ambergris coastal cologne.",
+    "description": "Crisp ocean air, bergamot zest, and ambergris create an exhilarating coastal freshness.",
+    "images": [
+      "/uploads/products/bellavita_skai_aquatic.svg"
+    ],
+    "attributes": {
+      "Brand": "Bella Vita Luxury",
+      "Profile": "Aquatic Freshness",
+      "Volume": "100ml"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T03:21:31.900Z"
+  },
+  {
+    "id": "prod-pa-euphoria-01",
+    "name": "Park Avenue Euphoria Intense Eau De Parfum (100ml)",
+    "sku": "QP-PA-EUPHORIA",
+    "category": "fragrances",
+    "subcategory": "Park Avenue Perfumes",
+    "price": 699,
+    "mrp": 999,
+    "buyPrice": 280,
+    "discountPercent": 30,
+    "stock": 80,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 145,
+    "shortDescription": "Feisty amber, exotic wood, and warm spices evening parfum.",
+    "description": "Sensual luxury blend of feisty amber, exotic wood, and warm spices engineered for nocturnal confidence.",
+    "images": [
+      "/uploads/products/img-1792071339757-7jx8gg.jpg"
+    ],
+    "attributes": {
+      "Brand": "Park Avenue",
+      "Range": "Euphoria Intense EDP",
+      "Volume": "100ml"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:35:43.555Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-pa-voyage-01",
+    "name": "Park Avenue Voyage Signature EDP (100ml)",
+    "sku": "QP-PA-VOYAGE",
+    "category": "fragrances",
+    "subcategory": "Park Avenue Perfumes",
+    "price": 649,
+    "mrp": 949,
+    "buyPrice": 260,
+    "discountPercent": 32,
+    "stock": 85,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": true,
+    "isFeatured": false,
+    "rating": 4.8,
+    "reviewCount": 120,
+    "shortDescription": "Aromatic sage, citrus, tonka bean, and musk signature EDP.",
+    "description": "Fresh citrus opening that settles into aromatic sage, tonka bean, and musk for daytime elegance.",
+    "images": [
+      "/uploads/products/img-1792071364124-zwo3u5.png"
+    ],
+    "attributes": {
+      "Brand": "Park Avenue",
+      "Signature": "Voyage Signature",
+      "Volume": "100ml"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:36:04.635Z",
+    "ingredients": [],
+    "variants": []
+  },
+  {
+    "id": "prod-pa-harmony-01",
+    "name": "Park Avenue Harmony Luxury Long-Lasting Body Fragrance (120ml)",
+    "sku": "QP-PA-HARMONY",
+    "category": "fragrances",
+    "subcategory": "Park Avenue Perfumes",
+    "price": 499,
+    "mrp": 749,
+    "buyPrice": 200,
+    "discountPercent": 33,
+    "stock": 100,
+    "isTobaccoFree": true,
+    "isAgeRestricted": false,
+    "isBestseller": false,
+    "isFeatured": true,
+    "rating": 4.7,
+    "reviewCount": 95,
+    "shortDescription": "Patchouli, citrus, and musk smoke-eliminating daily fragrance.",
+    "description": "Balanced daily fragrance combining patchouli, citrus oils, and musk to eliminate smoke odors and keep you fresh.",
+    "images": [
+      "/uploads/products/img-1792071381200-5t2fz7.jpg"
+    ],
+    "attributes": {
+      "Brand": "Park Avenue",
+      "Category": "Smoke Eliminating Mist",
+      "Volume": "120ml"
+    },
+    "createdAt": "2026-10-15T03:21:31.900Z",
+    "updatedAt": "2026-10-15T13:36:23.588Z",
+    "ingredients": [],
+    "variants": []
+  }
+];
+
+export const INITIAL_COUPONS: Coupon[] = [
+  {
+    id: 'coup-welcome100',
+    code: 'WELCOME100',
+    discountAmount: 100,
+    minOrderValue: 299,
+    maxDiscountCap: 100,
+    description: '₹100 Flat discount on your first order',
+    isActive: true,
+    eligibility: 'new_user_only',
+    usageLimitType: 'once_per_user',
+    maxUsagePerUser: 1,
+    maxTotalUsageLimit: 500,
+    usedCount: 24,
+  },
+  {
+    id: 'coup-royal20',
+    code: 'ROYAL20',
+    discountPercent: 20,
+    minOrderValue: 499,
+    maxDiscountCap: 400,
+    description: 'Flat 20% OFF on all orders above ₹499',
+    isActive: true,
+    eligibility: 'all',
+    usageLimitType: 'once_per_month',
+    maxUsagePerUser: 1,
+    maxTotalUsageLimit: 1000,
+    usedCount: 88,
+  },
+  {
+    id: 'coup-referral',
+    code: 'REFERROYAL',
+    discountAmount: 150,
+    minOrderValue: 599,
+    description: '₹150 OFF for friends joining via Referral Link',
+    isActive: true,
+    eligibility: 'referral_only',
+    usageLimitType: 'once_per_user',
+    maxUsagePerUser: 1,
+    referralCode: 'RAHUL-REF-01',
+    referrerBonusAmount: 100,
+    usedCount: 12,
+  },
+  {
+    id: 'coup-freeship',
+    code: 'FREESHIP',
+    discountAmount: 50,
+    minOrderValue: 399,
+    description: 'Free Express Discreet Delivery on orders above ₹399',
+    isActive: true,
+    eligibility: 'all',
+    usageLimitType: 'unlimited',
+    usedCount: 142,
+  },
+];
+
+export const INITIAL_HOMEPAGE_CONFIG: HomepageConfig = {
+  heroTitle: 'ROYAL LUXURY SMOKE SHOP',
+  heroSubtitle: 'PREMIUM HOOKAH & ACCESSORIES',
+  heroTagline: 'Curated Collection & Discreet Delivery.',
+  heroCtaText: 'EXPLORE CATALOG',
+  heroImage: '/uploads/products/mya_suka.svg',
+  announcementText: '💨 Dense Clouds • 📦 100% Discreet Packaging • 🚚 Fast Express Delivery',
+  slides: [
+    {
+      id: 'slide-1',
+      image: '/uploads/products/mya_suka.svg',
+      tagline: 'Authentic Hookahs, Premium Papers & Luxury Accessories.',
+      ctaText: 'SHOP NOW',
+      announcement: '📦 100% Discreet Packaging • 🚚 Fast Express Delivery',
+    },
+    {
+      id: 'slide-2',
+      image: '/uploads/products/afzal_pan_raas.svg',
+      tagline: '100% Herbal Shisha Molasses & Refreshing Mint Blends.',
+      ctaText: 'EXPLORE FLAVOURS',
+      announcement: '🌿 0% Nicotine • 0% Tobacco • 100% Pure Herbs',
+    },
+    {
+      id: 'slide-3',
+      image: '/uploads/products/zippo_matte_black.svg',
+      tagline: 'Genuine USA Zippo & Windproof Quad-Jet Torches.',
+      ctaText: 'SHOP LIGHTERS',
+      announcement: '⚡ Precision Jet Flame • Lifetime Reliability',
+    }
+  ],
+  enableDiscreetPackagingBadge: true,
+  footerPhone: '+91 98765 43210',
+  footerEmail: 'care@qualityshisha.com',
+  footerAddress: 'Royal Heritage Lane, Civil Lines, Premium District',
+};

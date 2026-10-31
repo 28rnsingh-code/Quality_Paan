@@ -1,0 +1,47 @@
+[
+  {
+    "id": "hookah",
+    "name": "Hookah / Shisha",
+    "displayName": "HOOKAH / SHISHA",
+    "image": "/uploads/products/mya_suka.svg",
+    "itemCount": 11,
+    "iconName": "Flame",
+    "description": "Genuine Mya, Cocoyaya, and Denver luxury brass and Russian stainless steel hookahs."
+  },
+  {
+    "id": "flavours",
+    "name": "Flavours",
+    "displayName": "FLAVOURS",
+    "image": "/uploads/products/afzal_pan_raas.svg",
+    "itemCount": 10,
+    "iconName": "Sparkles",
+    "description": "Authentic Afzal Pan Raas, Aladin Double Apple, and Al Fakher 100% herbal shisha molasses."
+  },
+  {
+    "id": "bongs_rolls",
+    "name": "Bongs & Rolls",
+    "displayName": "BONGS & ROLLS",
+    "image": "/uploads/products/bongchie_brown_booklet.svg",
+    "itemCount": 10,
+    "iconName": "FileText",
+    "description": "Bongchie, Thrice A Day papers, Perfect Roll cones, shatterproof acrylic bongs & glass percolators."
+  },
+  {
+    "id": "lighters_ashtray",
+    "name": "Lighters & Ashtrays",
+    "displayName": "LIGHTERS & ASHTRAYS",
+    "image": "/uploads/products/zippo_matte_black.svg",
+    "itemCount": 10,
+    "iconName": "Zap",
+    "description": "Original USA Zippo, Flux plasma & jet torches, Stash Pro lighters, crystal glass & spinning metal ashtrays."
+  },
+  {
+    "id": "fragrances",
+    "name": "Fragrances",
+    "displayName": "FRAGRANCES",
+    "image": "/uploads/products/denver_hamilton_edp.svg",
+    "itemCount": 9,
+    "iconName": "Wind",
+    "description": "Denver Hamilton, Bella Vita CEO MAN & White Oud, and Park Avenue long-lasting luxury perfumes."
+  }
+]

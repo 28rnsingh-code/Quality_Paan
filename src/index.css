@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-primary: #C59B27;
+    --gold-bright: #E5C158;
+    --gold-dark: #8C6A15;
+    --gold-metallic: linear-gradient(135deg, #ECC86A 0%, #C59B27 50%, #9B7817 100%);
+    --bg-dark: #080808;
+    --bg-card: #101010;
+    --bg-card-hover: #161616;
+    --deep-green: #0d381e;
+    --deep-green-accent: #155724;
+  }
+
+  body {
+    background-color: #080808;
+    color: #F3EFE0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-royal {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+  }
+
+  .font-serif-luxury {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+/* Custom Gold Gradients & Luxury Accents */
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #F3D079 0%, #D4AF37 40%, #B8860B 80%, #8C660B 100%);
+}
+
+.gold-gradient-subtle {
+  background: linear-gradient(180deg, rgba(197, 155, 39, 0.15) 0%, rgba(197, 155, 39, 0.03) 100%);
+}
+
+.gold-border {
+  border-color: rgba(197, 155, 39, 0.35);
+}
+
+.gold-border-active {
+  border-color: #D4AF37;
+}
+
+.gold-text-glow {
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+}
+
+.gold-box-glow {
+  box-shadow: 0 0 20px rgba(197, 155, 39, 0.15);
+}
+
+/* Hide scrollbars for smooth horizontal category scrollers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Scrollbar for desktop */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2415;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C59B27;
+}
+

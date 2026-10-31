@@ -1,0 +1,45 @@
+import { UserProfile } from '../types';
+
+export const INITIAL_CUSTOMERS: UserProfile[] = [
+  {
+    id: 'usr-rahul-01',
+    email: '28r.n.singh@gmail.com',
+    fullName: 'Rahul Singh',
+    phone: '+91 98765 43210',
+    role: 'admin',
+    customerType: 'old',
+    createdAt: '2026-08-01T00:00:00Z',
+    isAgeVerified: true,
+    panNumber: 'ABCPS1289R',
+    panHolderName: 'RAHUL SINGH',
+    panDob: '1988-06-15',
+    panVerified: true,
+    panVerifiedAt: '2026-08-01T10:00:00Z',
+    panProofUrl: '',
+    profileCompleted: true,
+    totalOrdersCount: 0,
+    totalSpent: 0,
+    addresses: [
+      {
+        id: 'addr-01',
+        fullName: 'Rahul Singh',
+        phone: '+91 98765 43210',
+        addressLine1: 'Suite 402, Royal Palms Residency',
+        addressLine2: 'Civil Lines, Near Heritage Residency',
+        city: 'New Delhi',
+        state: 'Delhi',
+        postalCode: '110054',
+        landmark: 'Opposite Royal Palace',
+        isDefault: true,
+        type: 'home',
+        liveLocation: {
+          latitude: 28.6812,
+          longitude: 77.2228,
+          accuracy: 5,
+          mapUrl: 'https://www.google.com/maps?q=28.6812,77.2228',
+          detectedAddress: 'Civil Lines, North Delhi, 110054',
+        },
+      },
+    ],
+  },
+];

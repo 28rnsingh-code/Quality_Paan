@@ -1,0 +1,6 @@
+{
+  "name": "Quality Paan - Premium Choice, Every Time",
+  "description": "Luxury royal e-commerce platform featuring handcrafted Egyptian hookahs & shisha, herbal flavours, bongs & rolls, lighters & ashtrays, and ambient fragrances with instant discreet delivery.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

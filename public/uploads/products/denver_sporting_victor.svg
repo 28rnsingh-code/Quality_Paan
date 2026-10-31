@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="perfumeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a2f1c" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#080808" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="perfumeGlass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a2f1c" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="65%" stop-color="#1a2f1c" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#050505" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="capGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2ECC71"/>
+      <stop offset="45%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#2ECC71"/>
+      <stop offset="100%" stop-color="#4a3b10"/>
+    </linearGradient>
+    <filter id="bottleShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#000" flood-opacity="0.95"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="800" fill="#080808"/>
+  <circle cx="400" cy="400" r="360" fill="url(#perfumeGlow)"/>
+
+  <g filter="url(#bottleShadow)" transform="translate(0, 15)">
+    <!-- Gold / Metallic Heavy Cap -->
+    <rect x="340" y="160" width="120" height="90" rx="8" fill="url(#capGold)" stroke="#333" stroke-width="2"/>
+    <rect x="360" y="250" width="80" height="20" fill="#222"/>
+
+    <!-- Glass Shoulder -->
+    <path d="M 330 270 L 470 270 L 510 320 L 290 320 Z" fill="url(#perfumeGlass)" stroke="#D4AF37" stroke-width="1.5"/>
+
+    <!-- Heavy Solid Crystal Bottle Body -->
+    <rect x="290" y="320" width="220" height="320" rx="16" fill="url(#perfumeGlass)" stroke="#D4AF37" stroke-width="2.5"/>
+
+    <!-- Heavy Base Glass Base -->
+    <rect x="300" y="600" width="200" height="30" rx="8" fill="#fff" opacity="0.15"/>
+
+    <!-- High-End Luxury Brand Label Plaque -->
+    <rect x="315" y="380" width="170" height="160" rx="8" fill="#121212" stroke="#D4AF37" stroke-width="2"/>
+    
+    <text x="400" y="420" font-family="'Cinzel', Georgia, serif" font-size="18" font-weight="900" fill="#E5C158" text-anchor="middle" letter-spacing="2">DENVER</text>
+    <line x1="340" y1="432" x2="460" y2="432" stroke="#D4AF37" stroke-width="1"/>
+    
+    <text x="400" y="465" font-family="system-ui, sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">SPORTING CLUB VICTOR</text>
+    <text x="400" y="495" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#A89050" text-anchor="middle" letter-spacing="2">EAU DE PARFUM</text>
+    <text x="400" y="520" font-family="system-ui, sans-serif" font-size="9" font-weight="800" fill="#2ECC71" text-anchor="middle">100ml / 3.4 FL.OZ</text>
+  </g>
+
+  <!-- Tagline below -->
+  <text x="400" y="730" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#E5C158" text-anchor="middle" letter-spacing="2">✓ SPORT FRESH & WOODY &bull; ALL-DAY PERFORMANCE</text>
+</svg>
